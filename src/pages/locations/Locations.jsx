@@ -3,6 +3,7 @@ import { useGetLocationDetailsQuery } from "../../services/adminApi";
 import AddLocation from "./AddLocation";
 import CardLocation from "./CardLocation";
 import ReactPaginate from "react-paginate";
+import Loader from "../../components/loader/Loader";
 
 const Locations = () => {
     const [addModal, setAddModal] = useState(false);
@@ -15,7 +16,7 @@ const Locations = () => {
 
     const { data, error, isLoading, isSuccess, refetch } = useGetLocationDetailsQuery();
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <div><Loader/></div>;
     if (error) return <div>Error: {error.message}</div>;
 
     const updateBrands = () => {
