@@ -64,7 +64,7 @@ const Category = () => {
                             ))}
                         </tbody>
                     </table>
-                    <div className="mt-4 flex justify-center pb-4">
+                    <div  className="mt-4 flex justify-center pb-4">
                         <ReactPaginate
                             previousLabel={"← Previous"}
                             nextLabel={"Next →"}
