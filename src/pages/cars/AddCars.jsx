@@ -45,25 +45,10 @@ const AddCars = ({ setAddModal, updateBrands }) => {
   const handleCancelModal = () => {
     setAddModal(false);
   };
-  // const toggleSwitch = (event) => {
-  //   setIsOn(!isOn);
-  //   const selectedValue = event.target.value;
-  //   setInclusive(selectedValue);
-  //   console.log(true, "1inc");
-
-  // };
+  
   const toggleChange = () => {
     setIsOn(!isOn);
-
-
     setInclusive(!isOn);
-
-    console.log(
-      !inclusive, 'inc'
-    );
-
-
-
   }
 
   const handleInputChange = (setter) => (event) => {
