@@ -1,17 +1,22 @@
 /* eslint-disable react/prop-types */
 import { RiMenu3Fill } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa6";
-import { logout } from "../../../features/userSlice";
-import { useDispatch } from "react-redux";
+import { logout } from "../../../../src/features/userSlice";
+import { useDispatch} from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = ({setOpenMenu, openMenu}) => {
+    // const {logout} = useSelector((state) => state.logout)
     const dispatch = useDispatch();
+    const navigate = useNavigate()
     
 
     const handleLogOut = (event)=>{
-        event.preventDefault()
-        dispatch(logout())
+        event.preventDefault();
+        dispatch(logout());
+        navigate('/')
+        
     }
     const handleMenu = ()=>{
         setOpenMenu(!openMenu)

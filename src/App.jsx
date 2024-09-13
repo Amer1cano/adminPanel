@@ -29,9 +29,10 @@ const App = () => {
     console.log("isAuthenticated:", isAuthenticated); // Log the authentication state
     if (isAuthenticated) {
       console.log('home');
+
      
     } else {
-      // navigate("/");
+      navigate("/");
       console.log('/login');
       
     }
